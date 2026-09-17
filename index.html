@@ -1,20 +1,333 @@
-<!-- 7. Секція: Контакти та форма запису (#contact) -->
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Трансцендентальна Медитація | Мілада Міклуш</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              cream: '#FAF8F5',
+              dark: '#1C2826',
+              accent: '#2D5A43',
+              accentLight: '#3D7A5C',
+              sage: '#E8ECE9',
+              muted: '#6B7280',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-cream text-brand-dark font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+  <!-- 1. Навігація -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-brand-cream/90 backdrop-blur-md border-b border-stone-200/70">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <a href="#" class="flex flex-col">
+        <span class="font-serif font-semibold text-lg sm:text-xl tracking-tight text-brand-dark">Трансцендентальна Медитація</span>
+        <span class="text-[11px] tracking-wider uppercase text-brand-muted font-medium">Мілада Міклуш • Офіційний вчитель</span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-700">
+        <a href="#about" class="hover:text-brand-accent transition-colors">Про техніку</a>
+        <a href="#teacher" class="hover:text-brand-accent transition-colors">Про вчителя</a>
+        <a href="#steps" class="hover:text-brand-accent transition-colors">Як проходить курс</a>
+        <a href="#research" class="hover:text-brand-accent transition-colors">Дослідження</a>
+      </nav>
+
+      <div class="hidden md:flex items-center space-x-4">
+        <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand-accent hover:bg-brand-accentLight text-white shadow-sm hover:shadow transition-all duration-200">
+          Запис на навчання
+        </a>
+      </div>
+
+      <button id="menu-btn" aria-label="Відкрити меню" class="md:hidden p-2 rounded-lg text-stone-700 hover:bg-stone-200/50 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Мобільне меню -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-stone-200 bg-brand-cream px-6 py-6 space-y-4">
+      <a href="#about" class="mobile-link block text-base font-medium text-stone-700 hover:text-brand-accent">Про техніку</a>
+      <a href="#teacher" class="mobile-link block text-base font-medium text-stone-700 hover:text-brand-accent">Про вчителя</a>
+      <a href="#steps" class="mobile-link block text-base font-medium text-stone-700 hover:text-brand-accent">Як проходить курс</a>
+      <a href="#research" class="mobile-link block text-base font-medium text-stone-700 hover:text-brand-accent">Дослідження</a>
+      <div class="pt-4 border-t border-stone-200">
+        <a href="#contact" class="mobile-link block w-full text-center px-5 py-3 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand-accent text-white">
+          Записатися на навчання
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Hero Секція -->
+  <section class="pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-sage text-brand-accent text-xs font-medium tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+            Офіційне навчання • Фонд Девіда Лінча
+          </div>
+
+          <div class="space-y-4">
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-dark leading-[1.15] font-normal tracking-tight">
+              Відновлення ресурсу та спокій <br class="hidden sm:inline" />
+              <span class="italic font-serif text-brand-accent">за 20 хвилин</span> на день
+            </h1>
+            <p class="text-base sm:text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+              Сертифіковане навчання автентичній техніці Трансцендентальної Медитації. Природний спосіб позбутися стресу, тривожності та відновити внутрішню стійкість без надзусиль і концентрації.
+            </p>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#contact" class="w-full sm:w-auto text-center px-8 py-4 rounded-full bg-brand-accent hover:bg-brand-accentLight text-white font-medium text-sm tracking-wide shadow-md hover:shadow-lg transition-all duration-200">
+              Записатися на вступне заняття
+            </a>
+            <a href="#about" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full border border-stone-300 hover:bg-stone-100/80 text-stone-800 font-medium text-sm transition-all duration-200">
+              Дізнатися більше
+            </a>
+          </div>
+
+          <div class="pt-8 border-t border-stone-200/80 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-center lg:text-left">
+            <div>
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-brand-dark">700+</div>
+              <div class="text-xs text-stone-500 mt-1 font-light leading-snug">Наукових досліджень</div>
+            </div>
+            <div class="border-l border-stone-200 pl-4">
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-brand-dark">з 2014</div>
+              <div class="text-xs text-stone-500 mt-1 font-light leading-snug">Року практики вчителя</div>
+            </div>
+            <div class="border-l border-stone-200 pl-4">
+              <div class="font-serif text-2xl sm:text-3xl font-semibold text-brand-dark">192</div>
+              <div class="text-xs text-stone-500 mt-1 font-light leading-snug">Країни світу практикують</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Фото Мілади з цитатою -->
+        <div class="lg:col-span-5 relative">
+          <div class="absolute -inset-4 bg-brand-sage/60 rounded-3xl -rotate-2 transform -z-10"></div>
+          <div class="relative bg-white p-3 rounded-2xl shadow-xl overflow-hidden border border-stone-100">
+            <img 
+              src="https://static.tildacdn.net/tild6539-6230-4838-b361-646433643366/photo.png" 
+              alt="Мілада Міклуш — Вчитель Трансцендентальної Медитації" 
+              class="w-full h-[450px] sm:h-[500px] object-cover object-top rounded-xl bg-stone-100"
+            />
+            <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-stone-100">
+              <p class="font-serif italic text-sm text-stone-800 leading-relaxed">
+                «Медитація відчиняє двері до внутрішньої свободи і стає вашим надійним ресурсом щодня.»
+              </p>
+              <div class="mt-2 text-xs font-semibold text-brand-accent tracking-wide uppercase">
+                — Мілада Міклуш
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Особливості техніки (#about) -->
+  <section id="about" class="py-20 bg-white border-t border-stone-200/60">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-accent font-semibold">Особливості техніки</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-brand-dark font-normal">Чим ТМ відрізняється від інших практик</h2>
+        <p class="text-stone-600 font-light text-base">Трансцендентальна Медитація — це проста, природна процедура, підтверджена сотнями незалежних досліджень.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-brand-cream/50 p-7 rounded-2xl border border-stone-200/70 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-brand-sage flex items-center justify-center text-brand-accent text-xl font-serif font-bold mb-5">01</div>
+          <h3 class="font-serif text-lg font-semibold text-brand-dark mb-2">Без зусиль</h3>
+          <p class="text-stone-600 text-sm leading-relaxed font-light">Вам не потрібно концентруватися, контролювати думки чи змушувати розум мовчати. Процес занурення природний.</p>
+        </div>
+
+        <div class="bg-brand-cream/50 p-7 rounded-2xl border border-stone-200/70 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-brand-sage flex items-center justify-center text-brand-accent text-xl font-serif font-bold mb-5">02</div>
+          <h3 class="font-serif text-lg font-semibold text-brand-dark mb-2">Глибокий відпочинок</h3>
+          <p class="text-stone-600 text-sm leading-relaxed font-light">Забезпечує рівень фізіологічного відпочинку глибший, ніж під час сну, ефективно розчиняючи накопичений хронічний стрес.</p>
+        </div>
+
+        <div class="bg-brand-cream/50 p-7 rounded-2xl border border-stone-200/70 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-brand-sage flex items-center justify-center text-brand-accent text-xl font-serif font-bold mb-5">03</div>
+          <h3 class="font-serif text-lg font-semibold text-brand-dark mb-2">Науково доведена</h3>
+          <p class="text-stone-600 text-sm leading-relaxed font-light">Понад 700 досліджень у провідних медичних університетах підтверджують зниження тривожності та нормалізацію тиску.</p>
+        </div>
+
+        <div class="bg-brand-cream/50 p-7 rounded-2xl border border-stone-200/70 hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 rounded-xl bg-brand-sage flex items-center justify-center text-brand-accent text-xl font-serif font-bold mb-5">04</div>
+          <h3 class="font-serif text-lg font-semibold text-brand-dark mb-2">Навичка на все життя</h3>
+          <p class="text-stone-600 text-sm leading-relaxed font-light">Опанувавши курс одного разу, ви володієте інструментом назавжди й отримуєте безкоштовну світову підтримку вчителів.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Про вчителя (#teacher) -->
+  <section id="teacher" class="py-20 bg-brand-cream">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <div class="relative">
+            <div class="absolute -inset-3 bg-brand-accent/10 rounded-2xl rotate-1 transform"></div>
+            <div class="relative bg-white p-3 rounded-2xl shadow-lg border border-stone-200/60">
+              <img 
+                src="https://static.tildacdn.net/tild6539-6230-4838-b361-646433643366/photo.png" 
+                alt="Мілада Міклуш" 
+                class="w-full h-[450px] object-cover object-top rounded-xl bg-stone-100"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+          <span class="text-xs uppercase tracking-widest text-brand-accent font-semibold">Ваш наставник</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-brand-dark font-normal">Мілада Міклуш</h2>
+          <p class="text-brand-accent font-medium text-sm">Сертифікований вчитель ТМ • Представник Фонду Девіда Лінча в Східній Європі</p>
+          
+          <p class="text-stone-600 font-light leading-relaxed">
+            Практикує Трансцендентальну Медитацію з 2014 року. Серед її учнів: лікарі, вчителі, підприємці, психологи, діти та воїни. Надає персональний супровід та комфортну інтеграцію техніки у ваше повсякденне життя.
+          </p>
+
+          <div class="bg-white p-6 rounded-xl border border-stone-200/70 space-y-3">
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-brand-sage text-brand-accent flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <p class="text-sm text-stone-700">Офіційна міжнародна сертифікація та пряма передача аутентичної техніки</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-brand-sage text-brand-accent flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <p class="text-sm text-stone-700">Участь у форумі «Україна 30» та благодійних програмах відновлення військових</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-brand-sage text-brand-accent flex items-center justify-center shrink-0 mt-0.5 font-bold text-xs">✓</div>
+              <p class="text-sm text-stone-700">Індивідуальні сесії перевірки медитації після навчання</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Три кроки навчання (#steps) -->
+  <section id="steps" class="py-20 bg-white border-t border-stone-200/60">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-accent font-semibold">Програма</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-brand-dark font-normal">Як проходить навчання</h2>
+        <p class="text-stone-600 font-light text-base">Курс побудовано так, щоб ви отримали надійну, самостійну практику без додатків і гаджетів.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="border border-stone-200 rounded-2xl p-8 flex flex-col justify-between hover:border-brand-accent transition-colors bg-brand-cream/30">
+          <div>
+            <span class="text-4xl font-serif text-brand-accent/40 font-bold block mb-4">01</span>
+            <h3 class="font-serif text-xl font-semibold mb-3 text-brand-dark">Вступна лекція</h3>
+            <p class="text-stone-600 text-sm font-light leading-relaxed mb-4">
+              Ознайомче заняття: механізм впливу на нервову систему, чому ТМ діє з перших днів, відповіді на ваші особисті питання.
+            </p>
+          </div>
+          <span class="text-xs font-semibold text-brand-accent uppercase tracking-wider">Тривалість: ~1 година</span>
+        </div>
+
+        <div class="border border-stone-200 rounded-2xl p-8 flex flex-col justify-between hover:border-brand-accent transition-colors bg-brand-cream/30">
+          <div>
+            <span class="text-4xl font-serif text-brand-accent/40 font-bold block mb-4">02</span>
+            <h3 class="font-serif text-xl font-semibold mb-3 text-brand-dark">Курс: 4 дні поспіль</h3>
+            <p class="text-stone-600 text-sm font-light leading-relaxed mb-4">
+              1 день — індивідуальне навчання з учителем один на один. Дні 2-4 — групові сесії для закріплення досвіду та правильного ритму.
+            </p>
+          </div>
+          <span class="text-xs font-semibold text-brand-accent uppercase tracking-wider">По 1–1.5 години щодня</span>
+        </div>
+
+        <div class="border border-stone-200 rounded-2xl p-8 flex flex-col justify-between hover:border-brand-accent transition-colors bg-brand-cream/30">
+          <div>
+            <span class="text-4xl font-serif text-brand-accent/40 font-bold block mb-4">03</span>
+            <h3 class="font-serif text-xl font-semibold mb-3 text-brand-dark">Підтримка на все життя</h3>
+            <p class="text-stone-600 text-sm font-light leading-relaxed mb-4">
+              Після закінчення курсу ви маєте право на безкоштовні індивідуальні перевірки практики та відвідування осередків ТМ у 190+ країнах світу.
+            </p>
+          </div>
+          <span class="text-xs font-semibold text-brand-accent uppercase tracking-wider">Безкоштовно по всьому світу</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Дослідження (#research) -->
+  <section id="research" class="py-20 bg-brand-cream border-t border-stone-200/60">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-accent font-semibold">Доказова база</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-brand-dark font-normal">Результати, підтверджені наукою</h2>
+        <p class="text-stone-600 font-light text-base">Ефекти регулярно підтверджуються провідними науковими виданнями та клінічними спостереженнями.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white p-8 rounded-2xl border border-stone-200/80 shadow-sm">
+          <div class="text-4xl font-serif font-bold text-brand-accent mb-2">-48%</div>
+          <h4 class="font-medium text-stone-800 mb-2">Зниження стресу та тривожності</h4>
+          <p class="text-xs text-stone-500 font-light">Швидке зниження гормонів стресу та нормалізація нервової системи з перших тижнів практики.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-stone-200/80 shadow-sm">
+          <div class="text-4xl font-serif font-bold text-brand-accent mb-2">+42%</div>
+          <h4 class="font-medium text-stone-800 mb-2">Покращення глибини сну</h4>
+          <p class="text-xs text-stone-500 font-light">Позбавляє від безсоння, відновлює природні цикли та дарує бадьорість вранці.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl border border-stone-200/80 shadow-sm">
+          <div class="text-4xl font-serif font-bold text-brand-accent mb-2">100%</div>
+          <h4 class="font-medium text-stone-800 mb-2">Синхронізація роботи мозку</h4>
+          <p class="text-xs text-stone-500 font-light">ЕЕГ показує повну узгодженість альфа-хвиль, що підвищує ясність мислення та творчий потенціал.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Контакти та форма запису (#contact) -->
   <section id="contact" class="py-24 bg-white border-t border-stone-200">
     <div class="max-w-6xl mx-auto px-6">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Ліва колонка: Прямі контакти та месенджери -->
+        <!-- Ліва колонка: Прямі контакти -->
         <div class="lg:col-span-5 space-y-8 text-center lg:text-left">
           <div class="space-y-3">
             <span class="text-xs uppercase tracking-widest text-brand-accent font-semibold">Зв'язок з нами</span>
             <h2 class="font-serif text-3xl sm:text-4xl text-brand-dark">Залишилися питання?</h2>
             <p class="text-stone-600 text-sm font-light leading-relaxed">
-              Ви можете написати безпосередньо або замовити консультацію. Ми радо розповімо про найближчі дати курсу та формати занять.
+              Ви можете зателефонувати безпосередньо, написати в месенджери або заповнити форму для зворотного дзвінка.
             </p>
           </div>
 
-          <!-- Список швидких контактів -->
           <div class="space-y-4 pt-2">
             <!-- Телефон -->
             <a href="tel:+380000000000" class="flex items-center justify-center lg:justify-start gap-4 p-4 rounded-2xl bg-brand-cream border border-stone-200 hover:border-brand-accent transition-all group">
@@ -22,14 +335,14 @@
                 📞
               </div>
               <div class="text-left">
-                <div class="text-xs text-stone-500 font-light">Телефон для довідок</div>
+                <div class="text-xs text-stone-500 font-light">Телефон для консультацій</div>
                 <div class="text-sm font-semibold text-stone-800">+380 (XX) XXX-XX-XX</div>
               </div>
             </a>
 
-            <!-- Telegram / Viber -->
+            <!-- Месенджери -->
             <div class="grid grid-cols-2 gap-3">
-              <a href="https://t.me/your_telegram" target="_blank" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 text-xs font-semibold tracking-wide border border-sky-200 transition-colors">
+              <a href="https://t.me/" target="_blank" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 text-xs font-semibold tracking-wide border border-sky-200 transition-colors">
                 <span>✈️ Telegram</span>
               </a>
               <a href="viber://chat?number=%2B380000000000" target="_blank" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 text-xs font-semibold tracking-wide border border-purple-200 transition-colors">
@@ -37,20 +350,20 @@
               </a>
             </div>
 
-            <!-- Локація / Фонд -->
+            <!-- Додаткова інформація -->
             <div class="pt-4 border-t border-stone-100 text-xs text-stone-500 font-light space-y-1 text-center lg:text-left">
-              <p>📍 <strong>Локація:</strong> Україна (Київ та онлайн-формат)</p>
-              <p>🏛 <strong>Організація:</strong> Офіційний осередок Фонду Девіда Лінча в Східній Європі</p>
+              <p>📍 <strong>Формат:</strong> Офлайн (Київ) та онлайн по всій Україні</p>
+              <p>🏛 <strong>Організація:</strong> Фонд Девіда Лінча в Східній Європі</p>
             </div>
           </div>
         </div>
 
-        <!-- Права колонка: Форма швидкого запису -->
+        <!-- Права колонка: Форма -->
         <div class="lg:col-span-7">
           <div class="bg-brand-cream border border-stone-200 rounded-3xl p-8 sm:p-10 shadow-sm">
             <div class="mb-6 text-center lg:text-left">
               <h3 class="font-serif text-2xl text-brand-dark font-semibold">Запис на вступну лекцію</h3>
-              <p class="text-stone-600 text-xs font-light mt-1">Заповніть форму, і Мілада зв'яжеться з вами протягом робочого дня.</p>
+              <p class="text-stone-600 text-xs font-light mt-1">Залиште контакти, і ми зв'яжемося для уточнення деталей.</p>
             </div>
 
             <form id="lead-form" class="space-y-4">
@@ -78,7 +391,7 @@
               </button>
               
               <p class="text-[11px] text-center text-stone-400 font-light">
-                🔒 Ваші дані конфіденційні та не передаються стороннім особам.
+                🔒 Ваші дані захищені та не передаються третім особам.
               </p>
             </form>
           </div>
@@ -88,3 +401,44 @@
 
     </div>
   </section>
+
+  <!-- 8. Футер -->
+  <footer class="bg-brand-dark text-white/80 py-12 text-sm border-t border-stone-800">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <div class="font-serif text-white font-semibold text-base">Трансцендентальна Медитація в Україні</div>
+        <div class="text-xs text-white/50 mt-1">Офіційний представник Фонду Девіда Лінча • Мілада Міклуш</div>
+      </div>
+      <div class="flex items-center space-x-6 text-xs text-white/60">
+        <a href="#about" class="hover:text-white transition-colors">Про техніку</a>
+        <a href="#teacher" class="hover:text-white transition-colors">Вчитель</a>
+        <a href="#steps" class="hover:text-white transition-colors">Курс</a>
+        <a href="#contact" class="hover:text-white transition-colors">Контакти</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Скрипти -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    document.getElementById('lead-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Дякуємо! Вашу заявку прийнято. Ми зв’яжемося з вами найближчим часом.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
